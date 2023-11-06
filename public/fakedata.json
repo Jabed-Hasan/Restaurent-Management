@@ -1,198 +1,254 @@
- [
+[
   {
     "foodName": "Spaghetti Bolognese",
     "foodImage": "spaghetti_image_url",
     "foodCategory": "Pasta",
     "price": "$12.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "Italy",
+    "foodDetails": "Delicious spaghetti with a rich Bolognese sauce."
   },
   {
     "foodName": "Pepperoni Pizza",
     "foodImage": "pizza_image_url",
     "foodCategory": "Pizza",
     "price": "$10.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Italy",
+    "foodDetails": "Classic pepperoni pizza with a crispy crust."
   },
   {
     "foodName": "Caesar Salad",
     "foodImage": "salad_image_url",
     "foodCategory": "Salad",
     "price": "$8.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "Mexico",
+    "foodDetails": "Fresh Caesar salad with creamy dressing and croutons."
   },
   {
     "foodName": "Hamburger",
     "foodImage": "hamburger_image_url",
     "foodCategory": "Burger",
     "price": "$9.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "United States",
+    "foodDetails": "Classic hamburger with a juicy patty and fresh toppings."
   },
   {
     "foodName": "Sushi Platter",
     "foodImage": "sushi_image_url",
     "foodCategory": "Sushi",
     "price": "$15.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "Japan",
+    "foodDetails": "Assorted sushi rolls with fresh fish and rice."
   },
   {
     "foodName": "Chicken Alfredo",
     "foodImage": "alfredo_image_url",
     "foodCategory": "Pasta",
     "price": "$14.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Italy",
+    "foodDetails": "Creamy chicken Alfredo pasta with a savory sauce."
   },
   {
     "foodName": "Steak with Mashed Potatoes",
     "foodImage": "steak_image_url",
     "foodCategory": "Steak",
     "price": "$19.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "United States",
+    "foodDetails": "Grilled steak with creamy mashed potatoes."
   },
   {
     "foodName": "Veggie Wrap",
     "foodImage": "wrap_image_url",
     "foodCategory": "Wrap",
     "price": "$7.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "United States",
+    "foodDetails": "Healthy veggie wrap with a variety of fresh vegetables."
   },
   {
     "foodName": "Fish Tacos",
     "foodImage": "tacos_image_url",
     "foodCategory": "Tacos",
     "price": "$11.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "Mexico",
+    "foodDetails": "Tasty fish tacos with a zesty salsa."
   },
   {
     "foodName": "Mango Smoothie",
     "foodImage": "smoothie_image_url",
     "foodCategory": "Smoothie",
     "price": "$5.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Tropical",
+    "foodDetails": "Refreshing mango smoothie made with ripe mangoes."
   },
   {
     "foodName": "Chocolate Cake",
     "foodImage": "cake_image_url",
     "foodCategory": "Dessert",
     "price": "$6.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "Unknown",
+    "foodDetails": "Decadent chocolate cake with a rich chocolate ganache."
   },
   {
     "foodName": "Vegetable Soup",
     "foodImage": "soup_image_url",
     "foodCategory": "Soup",
     "price": "$4.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "Various",
+    "foodDetails": "Homemade vegetable soup with a mix of fresh vegetables."
   },
   {
     "foodName": "Fried Chicken",
     "foodImage": "fried_chicken_image_url",
     "foodCategory": "Chicken",
     "price": "$9.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "United States",
+    "foodDetails": "Crispy fried chicken with a secret blend of herbs and spices."
   },
   {
     "foodName": "Tofu Stir-Fry",
     "foodImage": "tofu_stir_fry_image_url",
     "foodCategory": "Stir-Fry",
     "price": "$11.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Asia",
+    "foodDetails": "Tofu stir-fry with a medley of fresh vegetables."
   },
   {
     "foodName": "Fruit Salad",
     "foodImage": "fruit_salad_image_url",
     "foodCategory": "Salad",
     "price": "$6.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "Various",
+    "foodDetails": "Colorful fruit salad with a drizzle of honey."
   },
   {
     "foodName": "BBQ Ribs",
     "foodImage": "ribs_image_url",
     "foodCategory": "BBQ",
     "price": "$13.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "United States",
+    "foodDetails": "Tender BBQ ribs with smoky barbecue sauce."
   },
   {
     "foodName": "Tuna Sandwich",
     "foodImage": "tuna_sandwich_image_url",
     "foodCategory": "Sandwich",
     "price": "$8.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "Various",
+    "foodDetails": "Savory tuna sandwich with fresh ingredients."
   },
   {
     "foodName": "Pancakes",
     "foodImage": "pancakes_image_url",
     "foodCategory": "Breakfast",
     "price": "$7.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "United States",
+    "foodDetails": "Fluffy pancakes served with maple syrup."
   },
   {
     "foodName": "Shrimp Scampi",
     "foodImage": "shrimp_image_url",
     "foodCategory": "Seafood",
     "price": "$16.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "Italy",
+    "foodDetails": "Scrumptious shrimp scampi with garlic and butter sauce."
   },
   {
     "foodName": "Beef Burrito",
     "foodImage": "burrito_image_url",
     "foodCategory": "Burrito",
     "price": "$10.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "Mexico",
+    "foodDetails": "Hearty beef burrito with beans and salsa."
   },
   {
     "foodName": "Mushroom Risotto",
     "foodImage": "risotto_image_url",
     "foodCategory": "Risotto",
     "price": "$12.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "Italy",
+    "foodDetails": "Creamy mushroom risotto with Arborio rice."
   },
   {
     "foodName": "Egg Fried Rice",
     "foodImage": "fried_rice_image_url",
     "foodCategory": "Rice",
     "price": "$8.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Asia",
+    "foodDetails": "Flavorful egg fried rice with a mix of vegetables."
   },
   {
     "foodName": "Blueberry Muffin",
     "foodImage": "muffin_image_url",
     "foodCategory": "Dessert",
     "price": "$3.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "United States",
+    "foodDetails": "Moist blueberry muffin with sweet blueberries."
   },
   {
     "foodName": "Cesar Salad",
     "foodImage": "salad_image_url",
     "foodCategory": "Salad",
     "price": "$8.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "Mexico",
+    "foodDetails": "Crispy Caesar salad with Caesar dressing and croutons."
   },
   {
     "foodName": "Cheeseburger",
     "foodImage": "cheeseburger_image_url",
     "foodCategory": "Burger",
     "price": "$9.99",
-    "quantity": 2
+    "quantity": 2,
+    "countryOrigin": "United States",
+    "foodDetails": "Cheeseburger with a juicy patty and melted cheese."
   },
   {
     "foodName": "Chocolate Milkshake",
     "foodImage": "milkshake_image_url",
     "foodCategory": "Beverage",
     "price": "$4.99",
-    "quantity": 3
+    "quantity": 3,
+    "countryOrigin": "Unknown",
+    "foodDetails": "Creamy chocolate milkshake with whipped cream."
   },
   {
     "foodName": "Cupcake",
     "foodImage": "cupcake_image_url",
     "foodCategory": "Dessert",
     "price": "$2.99",
-    "quantity": 4
+    "quantity": 4,
+    "countryOrigin": "Various",
+    "foodDetails": "Delightful cupcake with colorful frosting."
   },
   {
     "foodName": "Hot Dog",
     "foodImage": "hotdog_image_url",
     "foodCategory": "Fast Food",
     "price": "$5.99",
-    "quantity": 5
+    "quantity": 5,
+    "countryOrigin": "United States",
+    "foodDetails": "Classic hot dog with mustard and ketchup."
   }
-]
+];

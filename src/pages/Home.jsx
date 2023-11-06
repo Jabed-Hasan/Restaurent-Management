@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { useLoaderData } from 'react-router-dom';
-import Brands from './Cards/Brands';
+import { NavLink, useLoaderData } from 'react-router-dom';
+
 import Footer from './footer/Footer';
 import Banner from './Banner/Banner';
 
@@ -13,16 +13,17 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <div className='py-10 px-10'>
+            <div className='py-10 px-10 text-center'>
                 <div>
                     <hr>
                     </hr>
                     <h1 className='font-bold text-center text-5xl my-7'> Top Selling Foods </h1>
                     <hr></hr>
+                    <ul><li className='btn bg-orange-400 text-white hover:text-black'><NavLink to='/All-Foods'>See All Foods</NavLink></li></ul>
                 </div>
               
 
-                 <button className='btn flex flex-col items-center'>See All Foods</button>
+                 
               
 
             </div>

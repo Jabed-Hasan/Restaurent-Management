@@ -52,7 +52,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className=''>
+        <div className='px-10'>
             <div className="navbar bg-base-100 items-center flex flex-col md:flex-row lg:flex-row">
                 <div className="navbar-start ">
                     <img className='h-[100px] w-[280px]' src="https://i.ibb.co/kQGdtkr/Screenshot-136.png" alt="" />
@@ -67,7 +67,7 @@ const Navbar = () => {
                     {
                         user ?
                             <>
-                                <h1>{user?.displayName}</h1>
+                                <h1 className='font-bold'>{user?.displayName}</h1>
 
 
                                 <div className="dropdown dropdown-end">
@@ -76,11 +76,12 @@ const Navbar = () => {
 
                                         {user?.email ?
                                             <>
-                                                <li><Link to='/AddFood'>Add Food Items</Link></li>
+                                                <li><Link to='/All-'>Add Food Items</Link></li>
+                                                <li><Link to='/All-'>My Added Food Items</Link></li>
                                                 <li><Link to='/Carts'>My Carts</Link></li>
-                                                <button onClick={handleSignOut} className="btn">Sign Out</button>
+                                                <button onClick={handleSignOut} className="btn bg-orange-400 text-white hover:text-black">Sign Out</button>
                                             </> :
-                                            <li className=''> </li>}
+                                            <li className=' '> </li>}
                                     </ul>
                                 </div>
 
@@ -90,7 +91,7 @@ const Navbar = () => {
                             :
                             <Link to="/login">
 
-                                <button className="btn">Login</button>
+                                <button className="btn bg-orange-400 text-white hover:text-black">Login</button>
                             </Link>
                     }
                 </div>
