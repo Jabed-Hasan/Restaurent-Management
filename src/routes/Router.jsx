@@ -14,12 +14,14 @@ import Carts from "../pages/MyCart/Carts";
 import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
 import Blogs from "../pages/Blogs/Blogs";
 import AllFoodItems from "../pages/AllFoodItems/AllFoodItems";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
 const routes = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorPage></ErrorPage>,
         
         children: [
             {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import FoodCard from '../FoodCard/FoodCard';
+import Footer from '../footer/Footer';
 
 const AllFoodItems = () => {
   const foods = useLoaderData();
@@ -50,15 +51,18 @@ const AllFoodItems = () => {
       </div>
 
       {searchResults.length > 0 ? (
-        <div className='grid md:grid-cols-2 gap-10 py-10'>
+        <div className='grid md:grid-cols-2 gap-10 py-10 px-10'>
           {searchResults.map((food) => (
             <FoodCard key={food._id} food={food} />
           ))}
         </div>
       ) : noResults ? (
-        <p>No results found.</p>
+        <p className='text-2xl font-bold text-center p-20'>No results found.</p>
       ) : null}
+
+<Footer></Footer>
     </div>
+    
   );
 };
 
