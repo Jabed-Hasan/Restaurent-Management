@@ -50,7 +50,10 @@ const AllFoodItems = () => {
         </div>
       </div>
 
+      <h1 className='text-4xl text-center font-bold py-10'>Our Menus</h1>
+
       {searchResults.length > 0 ? (
+        
         <div className='grid md:grid-cols-2 gap-10 py-10 px-10'>
           {searchResults.map((food) => (
             <FoodCard key={food._id} food={food} />

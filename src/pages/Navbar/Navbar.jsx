@@ -76,8 +76,8 @@ const Navbar = () => {
 
                                         {user?.email ?
                                             <>
-                                                <li><Link to='/All-'>Add Food Items</Link></li>
-                                                <li><Link to='/All-'>My Added Food Items</Link></li>
+                                                <li><Link to='/AddFood'>Add Food Items</Link></li>
+                                                <li><Link to='/myItems'>My Added Food Items</Link></li>
                                                 <li><Link to='/Carts'>My Carts</Link></li>
                                                 <button onClick={handleSignOut} className="btn bg-orange-400 text-white hover:text-black">Sign Out</button>
                                             </> :

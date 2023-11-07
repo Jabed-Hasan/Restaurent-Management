@@ -5,16 +5,16 @@ import Home from "../pages/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
-import Contac from "../pages/About/Contac"
-import MyCart from "../pages/MyCart/MyCart";
-import Details from "../pages/Details/Details";
-import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
+import Contac from "../pages/About/Contac";
+
+
 import ProductDetails from "../pages/ProductDetails/ProductDetails";
-import Carts from "../pages/MyCart/Carts";
 import AddFoodItem from "../pages/AddFoodItem/AddFoodItem";
 import Blogs from "../pages/Blogs/Blogs";
 import AllFoodItems from "../pages/AllFoodItems/AllFoodItems";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import MyaddedItems from "../pages/myAddedItems/MyaddedItems";
+import UpdateFood from "../pages/UpdateFood/UpdateFood";
 
 
 const routes = createBrowserRouter([
@@ -29,44 +29,23 @@ const routes = createBrowserRouter([
                 element: <Home></Home>,
                 
             },
-            {
-                path: '/products/:brandName',
-                element: <PrivateRoute>
-                    <Details></Details>
-                </PrivateRoute>,
-                loader: () => fetch(`http://localhost:4000/products`)
-            },
+           
             
             {
                 path: '/AddFood',
                 element: <PrivateRoute>
                     <AddFoodItem></AddFoodItem>
                 </PrivateRoute>,
-                loader: () => fetch('/Data.json')
+                 
+              
             },
+          
             {
-                path: '/MyCart',
+                path: 'myItems/update/:id',
                 element: <PrivateRoute>
-                    <MyCart></MyCart>
+                    <UpdateFood></UpdateFood>
                 </PrivateRoute>,
-                //loader: () => fetch('http://localhost:4000/myCart')
-                
-            },
-            {
-                path: '/Carts',
-                element: 
-                   <PrivateRoute>
-                    <Carts></Carts>
-                   </PrivateRoute>,
-                loader: () => fetch('http://localhost:4000/myCart')
-                
-            },
-            {
-                path: '/Products/:brandName/update/:id',
-                element: <PrivateRoute>
-                    <UpdateProduct></UpdateProduct>
-                </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:4000/products/update/${params.id}`)
+                loader: ({params}) => fetch(`http://localhost:4000/myItems/update/${params.id}`)
             },
             {
                 path: '/Products/:brandName/productDetails/:id',
@@ -99,7 +78,14 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:4000/FoodItems')
             
             },
-
+           
+            {
+                path: '/myItems',
+                element: <MyaddedItems></MyaddedItems>,
+                loader: () => fetch('http://localhost:4000/myItems')
+            
+            },
+           
 
 
 
