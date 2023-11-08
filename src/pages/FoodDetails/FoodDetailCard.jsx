@@ -1,14 +1,14 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const FoodDetailCard = () => {
     const food = useLoaderData();
-    const { _id, foodName, foodImage,
+    const { _id,foodName, foodImage,
         recipeDescription, 
         chefName,foodCategory, price, quantity, countryOrigin, foodDetails } = food;
     return (
         <div>
-            
+
 
             <div className="flex justify-around bg-base-100 gap-20 mx-20 ">
                 <img className="w-1/2 h-[450px]" src={foodImage} alt="Movie" />
@@ -21,18 +21,22 @@ const FoodDetailCard = () => {
                       < >
                      <div className="flex items-center gap-20">
                      <div className="flex items-center gap-2">
-                      <img className="w-[40px] h[40px] " src="https://i.ibb.co/Tmndc5c/Screenshot-144.png" alt="" />
+                      <img className="w-[40px] h[40px]" src="https://i.ibb.co/Tmndc5c/Screenshot-144.png" alt="" />
                       <p className=""><span className="font-semibold">Chef Name: </span>{chefName}</p>
                       </div>
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center justify-between gap-2">
                       <img className="w-[40px] h[40px] " src="https://i.ibb.co/X7hfwk3/orange-location-icon-png-18.png" alt="" />
                       <p className=""><span className="font-semibold">Country Origin: </span>{countryOrigin}</p>
                       </div>
                      </div>
-                       
+
                       </>
-                    <div className="text-center">
-                        <button className="px-10 py-2 my-2 bg-orange-500 rounded-xl text-white font-bold">order</button>
+                    <div className=" flex items-center gap-5 justify-between mt-2">
+                        <div className="flex items-center gap-2">
+                            <img className="w-[40px] h[40px]" src="https://i.ibb.co/9nPSqs9/Screenshot-145.png" alt="" />
+                        <p className="text-lg font-bold">Available Quantity : {quantity}</p>
+                        </div>
+                        <Link to={`/food-detail/purchase/${_id}`}><button className="px-10 py-2 my-2 bg-orange-500 rounded-xl text-white font-bold">order</button></Link>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,7 @@ const AddFoodItem = () => {
         console.log(newItems)
 
 
-        fetch('http://localhost:4000/myItems', {
+        fetch(`http://localhost:4000/myItems`, {
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -50,7 +50,6 @@ const AddFoodItem = () => {
 
 
     }
-
 
 
 

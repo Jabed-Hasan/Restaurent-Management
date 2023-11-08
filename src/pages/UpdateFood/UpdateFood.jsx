@@ -133,7 +133,7 @@ const UpdateFood = () => {
             </label>
             <label className="input-group">
                 
-                <input type="text" name="addby" placeholder=" " defaultValue={user?.displayName} className="input input-bordered w-full" />
+                <input type="text" name="addby" placeholder=" " defaultValue={user?.displayName}  className="input input-bordered w-full border-[1px]" readOnly  disabled style={{ backgroundColor: 'lightgray', borderColor: 'darkgray' }} />
             </label>
         </div>
         <div className="form-control w-1/2 ml-4">
@@ -154,7 +154,7 @@ const UpdateFood = () => {
             </label>
             <label className="input-group">
                 
-                <input type="text"  name="email"  placeholder=" " defaultValue={user?.email} className="input input-bordered w-full" />
+                <input type="text"  name="email"  placeholder=" " defaultValue={user?.email} disabled style={{ backgroundColor: 'lightgray', borderColor: 'darkgray' }} className="input input-bordered w-full" />
             </label>
         </div>
         <div className="form-control w-1/2 ml-4">

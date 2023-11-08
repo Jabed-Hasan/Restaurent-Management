@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Products = () => {
+  const { user } = useContext(AuthContext);
   const product = useLoaderData();
   console.log(product);
   
