@@ -15,6 +15,7 @@ import AllFoodItems from "../pages/AllFoodItems/AllFoodItems";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import MyaddedItems from "../pages/myAddedItems/MyaddedItems";
 import UpdateFood from "../pages/UpdateFood/UpdateFood";
+import FoodDetailCard from "../pages/FoodDetails/FoodDetailCard";
 
 
 const routes = createBrowserRouter([
@@ -48,11 +49,11 @@ const routes = createBrowserRouter([
                 loader: ({params}) => fetch(`http://localhost:4000/myItems/update/${params.id}`)
             },
             {
-                path: '/Products/:brandName/productDetails/:id',
+                path: '/foodDetails',
                 element: <PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
-              loader: ({params}) => fetch(`http://localhost:4000/products/productDetails/single/${params.id}`)
+              //loader: ({params}) => fetch(`http://localhost:4000/products/productDetails/single/${params.id}`)
             },
             
             {
@@ -77,6 +78,14 @@ const routes = createBrowserRouter([
                 element: <AllFoodItems></AllFoodItems>,
                 loader: () => fetch('http://localhost:4000/FoodItems')
             
+            },
+            {
+                path: '/food-detail/:id',
+                element: <PrivateRoute>
+                    <FoodDetailCard></FoodDetailCard>,
+                </PrivateRoute>,
+              //  loader: () => fetch('http://localhost:4000/FoodItems/food-detail/:')
+              loader: ({params}) => fetch(`http://localhost:4000/food-detail/${params.id}`)
             },
            
             {

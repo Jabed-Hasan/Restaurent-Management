@@ -5,6 +5,7 @@ import Footer from '../footer/Footer';
 
 const AllFoodItems = () => {
   const foods = useLoaderData();
+  console.log(foods)
   const [searchText, setSearchText] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [noResults, setNoResults] = useState(false);
