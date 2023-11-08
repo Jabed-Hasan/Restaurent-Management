@@ -1,7 +1,7 @@
 
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../layout/Root";
-import Home from "../pages/Home";
+import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
@@ -17,6 +17,9 @@ import MyaddedItems from "../pages/myAddedItems/MyaddedItems";
 import UpdateFood from "../pages/UpdateFood/UpdateFood";
 import FoodDetailCard from "../pages/FoodDetails/FoodDetailCard";
 import Purchase from "../pages/FoodDetails/Purchase";
+import HomeCard from "../pages/Home/HomeCard";
+import HomeCardParent from "../pages/Home/HomeCardParent";
+import MyOrderedItems from "../pages/MyOrderdItems/MyOrderedItems";
 
 
 
@@ -31,8 +34,11 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
+                loader: () => fetch('http://localhost:4000/FoodItems')
+
                 
             },
+
            
             
             {
@@ -41,6 +47,14 @@ const routes = createBrowserRouter([
                     <AddFoodItem></AddFoodItem>
                 </PrivateRoute>,
                  
+              
+            },
+            {
+                path: '/Carts',
+                element: <PrivateRoute>
+                    <MyOrderedItems></MyOrderedItems>
+                </PrivateRoute>,
+                 loader:() => fetch('http://localhost:4000/Carts'),
               
             },
           
@@ -82,6 +96,7 @@ const routes = createBrowserRouter([
                 loader: () => fetch('http://localhost:4000/FoodItems')
             
             },
+        
             {
                 path: '/food-detail/:id',
                 element: <PrivateRoute>

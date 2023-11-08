@@ -14,9 +14,11 @@ const Purchase = () => {
         foodCategory,
         foodDetails,
         quantity: availableQuantity,
+        
         foodImage,
         countryOrigin,
         chefName,
+        
     } = Food;
 
     const [quantity, setQuantity] = useState(1);
@@ -49,6 +51,7 @@ const Purchase = () => {
             const origin = form.origin.value;
             const addby = form.addby.value;
             const email = form.email.value;
+            const image = form.image.value;
             const madeby = form.madeby.value;
 
             const UpdateFood = {
@@ -62,6 +65,7 @@ const Purchase = () => {
                 addby,
                 email,
                 madeby,
+                image
             };
 
             console.log(UpdateFood);
@@ -264,6 +268,22 @@ const Purchase = () => {
                         </label>
                     </div>
                 </div>
+                <div className="form-control ml-4 mb-2">
+                        <label className="label">
+                            <span className="label-text">Food Image</span>
+                        </label>
+                        <label className="input-group">
+                            <input
+                                type="text"
+                                name="image"
+                                placeholder=" "
+                                defaultValue={foodImage}
+                                disabled
+                                style={{ backgroundColor: 'lightgray', borderColor: 'darkgray' }}
+                                className="input input-bordered w-full"
+                            />
+                        </label>
+                    </div>
 
                 <input
                     type="submit"

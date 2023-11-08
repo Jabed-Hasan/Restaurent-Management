@@ -2,8 +2,9 @@ import React from 'react';
 
 import { NavLink, useLoaderData } from 'react-router-dom';
 
-import Footer from './footer/Footer';
-import Banner from './Banner/Banner';
+import Footer from '../footer/Footer';
+import Banner from '../Banner/Banner';
+import HomeCard from './HomeCard';
 
 
 
@@ -16,16 +17,21 @@ const Home = () => {
             <div className='py-10 px-10 text-center'>
                 <div>
                     <hr>
-                    </hr>
+                    </hr><div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
+                    {/* {
+
+                        data.map(adata => <HomeCard key={adata} data={adata}></HomeCard>)
+                    } */}
+
+
+                </div>
+
+                    
                     <h1 className='font-bold text-center text-5xl my-7'> Top Selling Foods </h1>
                     <hr></hr>
                     <ul><li className='btn bg-orange-400 text-white hover:text-black'><NavLink to='/All-Foods'>See All Foods</NavLink></li></ul>
                 </div>
-              
-
-                 
-              
-
+    
             </div>
             <div className='mb-20 mt-20'>
                     <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/YBQpWCB/Screenshot-126.png)' }}>
@@ -47,4 +53,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Home;  

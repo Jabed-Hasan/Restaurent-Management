@@ -78,7 +78,7 @@ const Navbar = () => {
                                             <>
                                                 <li><Link to='/AddFood'>Add Food Items</Link></li>
                                                 <li><Link to='/myItems'>My Added Food Items</Link></li>
-                                                <li><Link to='/Carts'>My Carts</Link></li>
+                                                <li><Link to='/Carts'>My Orderd Items</Link></li>
                                                 <button onClick={handleSignOut} className="btn bg-orange-400 text-white hover:text-black">Sign Out</button>
                                             </> :
                                             <li className=' '> </li>}
