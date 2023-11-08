@@ -54,8 +54,12 @@ const Register = () => {
                     displayName: name, photoURL:photoUrl
 
                   })
-               // navigate(location?.state ? location.state : '/');
-                  navigate('/login')
+
+                  setTimeout(function (){
+                    window.location.reload();
+                  },2000)
+               navigate(location?.state ? location.state : '/');
+                  //navigate('/login')
               
             })
             .catch(error => {
