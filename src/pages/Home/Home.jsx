@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { NavLink, useLoaderData } from 'react-router-dom';
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
 
 import Footer from '../footer/Footer';
 import Banner from '../Banner/Banner';
@@ -43,13 +43,13 @@ const Home = () => {
             </div>
             </div>
             <div className='mb-20 mt-20'>
-                    <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/YBQpWCB/Screenshot-126.png)' }}>
+                    <div className="hero min-h-screen" style={{ backgroundImage: 'url(https://i.ibb.co/j5LwX2w/78762405-raw-chicken-fillet-with-cooking-ingredients-on-black-slate-table-food-background-long-banne.jpg)' }}>
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
                             <div className="max-w-md">
                                 <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                                 <p className="mb-5 text-2xl">"Grave your Food , Now!"</p>
-                                <button className="btn btn-primary bg-orange-500">Get Started</button>
+                               <Link to={'All-Foods'}> <button className="btn btn-primary bg-orange-500 border-none">Get Started</button></Link>
                             </div>
                         </div>
                     </div>
