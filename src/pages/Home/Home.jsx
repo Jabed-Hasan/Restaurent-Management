@@ -10,30 +10,27 @@ import HomeCard from './HomeCard';
 
 const Home = () => {
     const data = useLoaderData();
+    const topSixData = data.slice(0, 6);
     console.log(data);
     return (
         <div>
             <Banner></Banner>
+            <div>
+            <Banner></Banner>
             <div className='py-10 px-10 text-center'>
                 <div>
-                    <hr>
-                    </hr><div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
-                    {/* {
-
-                        data.map(adata => <HomeCard key={adata} data={adata}></HomeCard>)
-                    } */}
-
-
-                </div>
-
-                    
-                    <h1 className='font-bold text-center text-5xl my-7'> Top Selling Foods </h1>
+                <h1 className='font-bold text-center text-5xl my-7'> Top Selling Foods </h1>
                     <hr></hr>
-                    <ul><li className='btn bg-orange-400 text-white hover:text-black'><NavLink to='/All-Foods'>See All Foods</NavLink></li></ul>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5'>
+                        {
+                            topSixData.map(adata => <HomeCard key={adata} data={adata}></HomeCard>)
+                        }
+                    </div>
+                    
+                    <hr></hr>
+                    <ul><li className='btn bg-orange-400 text-white hover:text-black my-5'><NavLink to='/All-Foods'>See All Foods</NavLink></li></ul>
                 </div>
-    
             </div>
-            <div>
                 <h1 className='text-5xl font-bold text-center my-20'>Our Spacial Offers</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 px-5 '>
                 
