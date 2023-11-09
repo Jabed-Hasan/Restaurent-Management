@@ -45,8 +45,8 @@ const Navbar = () => {
         <li><NavLink to='/All-Foods'>All Food Items</NavLink></li>
         <li><NavLink to='/blogs'>Blogs</NavLink></li>
         <li><NavLink to='/About'>About</NavLink></li>
-        
-        
+
+
 
 
 
@@ -62,39 +62,40 @@ const Navbar = () => {
                         {Navlinks}
                     </ul>
                 </div>
-                <div className="navbar-end gap-5">
+                <div className="navbar-end flex items-center gap-5">
 
-                    {
-                        user ?
-                            <>
-                                <h1 className='font-bold'>{user?.displayName}</h1>
+                    {user ? (
+                        <div className='flex items-center border-2 border-solid border-orange-500 pl-1 rounded-[50px]'>
+                            <h1 className='font-bold text-sm lg:text-lg'>{user?.displayName}</h1>
 
+                            <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn m-1 btn-ghost btn-circle avatar border-2 border-solid border-black ">
+                                    <button><img className="w-14 rounded-full border-orange-100" src={user?.photoURL} alt="User Avatar" /></button>
+                                </label>
+                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 my-2 shadow bg-base-100 rounded-box sm:w-48 md:w-52 lg:w-56">
 
-                                <div className="dropdown dropdown-end">
-                                    <label tabIndex={0} className="btn m-1 btn-ghost btn-circle avatar border-2 border-solid border-black "><button><img className="w-14 rounded-full border-orange-100" src={user?.photoURL} /></button></label>
-                                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 my-2 shadow bg-base-100 rounded-box w-52">
+                                    {user?.email ? (
+                                        <>
+                                            <li><Link to='/AddFood'>Add Food Items</Link></li>
+                                            <li><Link to='/myItems'>My Added Food Items</Link></li>
+                                            <li><Link to='/Carts'>My Ordered Items</Link></li>
+                                            <button onClick={handleSignOut} className="btn bg-orange-400 text-white hover:text-black text-sm md:text-base lg:text-sm">Sign Out</button>
+                                        </>
+                                    ) : (
+                                        <li className=' '> </li>
+                                    )}
+                                </ul>
+                            </div>
+                        </div>
+                    ) : (
+                        <Link to="/login">
+                            <button className="btn bg-orange-400 text-white hover:text-black text-sm md:text-base lg:text-sm">Login</button>
+                        </Link>
+                    )}
 
-                                        {user?.email ?
-                                            <>
-                                                <li><Link to='/AddFood'>Add Food Items</Link></li>
-                                                <li><Link to='/myItems'>My Added Food Items</Link></li>
-                                                <li><Link to='/Carts'>My Orderd Items</Link></li>
-                                                <button onClick={handleSignOut} className="btn bg-orange-400 text-white hover:text-black">Sign Out</button>
-                                            </> :
-                                            <li className=' '> </li>}
-                                    </ul>
-                                </div>
-
-
-                               
-                            </>
-                            :
-                            <Link to="/login">
-
-                                <button className="btn bg-orange-400 text-white hover:text-black">Login</button>
-                            </Link>
-                    }
                 </div>
+
+
             </div>
         </div>
     );

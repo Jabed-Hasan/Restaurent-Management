@@ -43,7 +43,7 @@ const Contac = () => {
       </div>
       <div className="relative flex flex-col max-w-[380px] max-h-[420px] rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
         <div className="relative mx-4 mt-4 h-80 overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
-          <img src="https://i.ibb.co/3mfCD1S/images-1.jpg" alt="profile-picture" />
+          <img src="https://i.ibb.co/JshfgmM/Screenshot-159.png" alt="profile-picture" />
         </div>
         <div className="p-6 text-center">
           <h4 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">

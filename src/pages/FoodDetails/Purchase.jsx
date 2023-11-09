@@ -70,7 +70,7 @@ const Purchase = () => {
 
             console.log(UpdateFood);
 
-            fetch(`http://localhost:4000/food-detail/purchase/${_id}`, {
+            fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/food-detail/purchase/${_id}`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',

@@ -28,7 +28,7 @@ const AddFoodItem = () => {
         console.log(newItems)
 
 
-        fetch(`http://localhost:4000/myItems`, {
+        fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myItems`, {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

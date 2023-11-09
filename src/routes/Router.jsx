@@ -17,8 +17,7 @@ import MyaddedItems from "../pages/myAddedItems/MyaddedItems";
 import UpdateFood from "../pages/UpdateFood/UpdateFood";
 import FoodDetailCard from "../pages/FoodDetails/FoodDetailCard";
 import Purchase from "../pages/FoodDetails/Purchase";
-import HomeCard from "../pages/Home/HomeCard";
-import HomeCardParent from "../pages/Home/HomeCardParent";
+
 import MyOrderedItems from "../pages/MyOrderdItems/MyOrderedItems";
 
 
@@ -34,7 +33,7 @@ const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:4000/FoodItems')
+                loader: () => fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/FoodItems')
 
                 
             },
@@ -54,7 +53,7 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <MyOrderedItems></MyOrderedItems>
                 </PrivateRoute>,
-                 loader:() => fetch('http://localhost:4000/Carts'),
+                 loader:() => fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/Carts',{credentials:'include'}),
               
             },
           
@@ -63,14 +62,14 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <UpdateFood></UpdateFood>
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:4000/myItems/update/${params.id}`)
+                loader: ({params}) => fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myItems/update/${params.id}`)
             },
             {
                 path: '/foodDetails',
                 element: <PrivateRoute>
                     <ProductDetails></ProductDetails>
                 </PrivateRoute>,
-              //loader: ({params}) => fetch(`http://localhost:4000/products/productDetails/single/${params.id}`)
+              //loader: ({params}) => fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/products/productDetails/single/${params.id}`)
             },
             
             {
@@ -93,7 +92,7 @@ const routes = createBrowserRouter([
             {
                 path: '/All-Foods',
                 element: <AllFoodItems></AllFoodItems>,
-                loader: () => fetch('http://localhost:4000/FoodItems')
+                loader: () => fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/FoodItems')
 
             
             },
@@ -103,21 +102,21 @@ const routes = createBrowserRouter([
                 element: <PrivateRoute>
                     <FoodDetailCard></FoodDetailCard>,
                 </PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:4000/food-detail/${params.id}`)
-              //  loader: () => fetch('http://localhost:4000/FoodItems/food-detail/:')
+                loader: ({params}) => fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/food-detail/${params.id}`)
+              //  loader: () => fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/FoodItems/food-detail/:')
               
             },
             {
                 path: '/food-detail/purchase/:id',
                 element: <Purchase></Purchase>,
-                loader: ({params}) => fetch(`http://localhost:4000/food-detail/purchase/${params.id}`)
+                loader: ({params}) => fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/food-detail/purchase/${params.id}`)
             },
           
            
             {
                 path: '/myItems',
                 element: <MyaddedItems></MyaddedItems>,
-                loader: () => fetch('http://localhost:4000/myItems')
+                loader: () => fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myItems')
             
             },
            

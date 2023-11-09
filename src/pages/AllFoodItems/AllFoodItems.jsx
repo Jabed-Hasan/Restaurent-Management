@@ -8,11 +8,11 @@ const AllFoodItems = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [noResults, setNoResults] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Number of items to display per page
+  const itemsPerPage = 6; // Number of items to display per page
 
   useEffect(() => {
     // Fetch your data from the backend using pagination
-    fetch(`http://localhost:4000/FoodItems?page=${currentPage}&size=${itemsPerPage}`)
+    fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/FoodItems?page=${currentPage}&size=${itemsPerPage}`)
       .then((response) => response.json())
       .then((data) => {
         setFoods(data);
@@ -51,7 +51,7 @@ const AllFoodItems = () => {
               onChange={(e) => setSearchText(e.target.value)}
             />
             <input
-              className="bg-red-500 text-white p-2 rounded-lg cursor-pointer hover-bg-orange-500"
+              className="bg-orange-500 text-white p-2 rounded-lg cursor-pointer hover-bg-red-500"
               type="submit"
               value="Search"
             />

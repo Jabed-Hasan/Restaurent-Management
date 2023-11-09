@@ -19,7 +19,7 @@ const Blogs = () => {
                     One-way data binding is commonly used in frameworks like React and Angular. It provides a clear and predictable way to manage the flow of data and keep the data source and the UI component separate, making it easier to reason about and maintain the application.</p>
             </div>
             <div className="px-10">
-                <h1 className="text-4xl font-bold my-10">. What is NPM in node.js?</h1>
+                <h1 className="text-4xl font-bold my-10">2. What is NPM in node.js?</h1>
                 <p className="bg-gray-200 text-justify p-5 r2ounded-lg">NPM stands for "Node Package Manager." It is the default package manager for Node.js, which is a popular JavaScript runtime used for building server-side applications and command-line tools. NPM serves as a central repository for JavaScript packages and modules, making it easy to manage and distribute code libraries.
 
                     Here are some key aspects of NPM in Node.js:
