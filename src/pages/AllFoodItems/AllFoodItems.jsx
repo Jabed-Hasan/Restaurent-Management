@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FoodCard from '../FoodCard/FoodCard';
 import Footer from '../footer/Footer';
+import { Helmet } from 'react-helmet';
 
 const AllFoodItems = () => {
   const [foods, setFoods] = useState([]);
@@ -12,7 +13,7 @@ const AllFoodItems = () => {
 
   useEffect(() => {
     // Fetch your data from the backend using pagination
-    fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/FoodItems?page=${currentPage}&size=${itemsPerPage}`)
+    fetch(`http://localhost:4000/FoodItems?page=${currentPage}&size=${itemsPerPage}`)
       .then((response) => response.json())
       .then((data) => {
         setFoods(data);
@@ -36,6 +37,11 @@ const AllFoodItems = () => {
 
   return (
     <div className="">
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>All  Food Items - Find your Favourite Food </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="relative h-[70vh] bg-[url('https://i.ibb.co/CMQ33yX/1-1.jpg')] opacity-80"></div>
       <div>
         <h1 className="text-white absolute font-semibold left-[6%] bottom-[2%] md:left-[30%] md:bottom-[20%] lg:top-[40%] lg:left-[26%] text-center text-lg lg:text-5xl md:text-2xl items-center border-solid">

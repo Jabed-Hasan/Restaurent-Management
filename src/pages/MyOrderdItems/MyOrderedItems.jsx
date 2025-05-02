@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import OrderItemCard from "./OrderItemCard";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 
 const MyOrderedItems = () => {
@@ -18,12 +19,17 @@ const MyOrderedItems = () => {
 
     return (
         <div className='grid md:grid-cols-2 gap-4 px-10 my-10'>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Carts- Your Ordered Items</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             {filteredItems.length > 0 ? (
                 filteredItems.map(adata => (
                     <OrderItemCard key={adata} data={adata} items={items} setItems={setItems} />
                 ))
             ) : (
-                <div><h1 className="text-4xl font-bold">No ordered items found for the logged-in user.</h1></div>
+                <div><h1 className="text-4xl font-bold text-center">No ordered items found for the logged-in user. Please Order to view your Carts</h1></div>
             )}
         </div>
     );

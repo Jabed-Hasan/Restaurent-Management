@@ -22,7 +22,7 @@ const ProductDetails = () => {
   };
 
   const handleCart = () => {
-    fetch('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myCart', {
+    fetch('http://localhost:4000/myCart', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'

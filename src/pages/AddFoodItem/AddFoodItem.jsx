@@ -3,6 +3,7 @@ import Swal from 'sweetalert2'
 
 import { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import { Helmet } from 'react-helmet';
 
 const AddFoodItem = () => {
 
@@ -28,7 +29,7 @@ const AddFoodItem = () => {
         console.log(newItems)
 
 
-        fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myItems`, {
+        fetch(`http://localhost:4000/myItems`, {
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -55,13 +56,18 @@ const AddFoodItem = () => {
 
     return (
         <div className="bg-[#F4F3F0] p-24">
+              <Helmet>
+                <meta charSet="utf-8" />
+                <title>Add Food Items - Add Your Favourite Foods </title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <h1 className='text-xl font-bold text-center'>Add a Food Item</h1>
 
             <form onSubmit={handleAddcoffee}>
                 {/* form name and quantity Control */}
             <div className="md:flex mb-8">
-            <div className="form-control w-1/2 ml-4">
-                <label className="label">
+            <div className="form-control  lg:w-1/2  ml-4">
+                <label className="label ">
                     <span className="label-text">Food Name</span>
                 </label>
                 <label className="input-group">
@@ -69,7 +75,7 @@ const AddFoodItem = () => {
                     <input type="text" name="name" placeholder="Food Name" className="input input-bordered w-full" />
                 </label>
             </div>
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Price</span>
                 </label>
@@ -81,7 +87,7 @@ const AddFoodItem = () => {
         </div>
                 {/* form  Supplier and taste Control */}
             <div className="md:flex mb-8">
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4 ">
                 <label className="label">
                     <span className="label-text">Food category</span>
                 </label>
@@ -90,7 +96,7 @@ const AddFoodItem = () => {
                     <input type="text" name="foodCategory" placeholder="Food category" className="input input-bordered w-full" />
                 </label>
             </div>
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Short Description</span>
                 </label>
@@ -102,7 +108,7 @@ const AddFoodItem = () => {
         </div>
                 {/* form category ad Details Control */}
             <div className="md:flex mb-8">
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Photo URL </span>
                 </label>
@@ -111,7 +117,7 @@ const AddFoodItem = () => {
                     <input type="text" name="image" placeholder="Image Url " className="input input-bordered w-full" />
                 </label>
             </div>
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Quantity</span>
                 </label>
@@ -126,7 +132,7 @@ const AddFoodItem = () => {
 
 
         <div className="md:flex mb-8">
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Add By </span>
                 </label>
@@ -135,7 +141,7 @@ const AddFoodItem = () => {
                     <input type="text" name='addby'  placeholder=" "  className="input input-bordered w-full" />
                 </label>
             </div>
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">Food Origin</span>
                 </label>
@@ -149,7 +155,7 @@ const AddFoodItem = () => {
     
        
         <div className="md:flex mb-8">
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">User Name </span>
                 </label>
@@ -158,11 +164,11 @@ const AddFoodItem = () => {
                     <input type="text" name='username'  placeholder=" " defaultValue={user?.displayName} className="input input-bordered w-full" />
                 </label>
             </div>
-            <div className="form-control w-1/2 ml-4">
+            <div className="form-control lg:w-1/2 ml-4">
                 <label className="label">
                     <span className="label-text">User Email</span>
                 </label>
-                <label className="input-group">
+                <label className="input-group ">
                     
                     <input type="text" name="email" placeholder="" defaultValue={user?.email} className="input input-bordered w-full" />
                 </label>

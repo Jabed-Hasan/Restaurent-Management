@@ -24,7 +24,7 @@ const OrderItemCard = ({ data, items, setItems }) => {
     }).then((result) => {
       if (result.isConfirmed) {
 
-        fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/Carts/${_id}`, {
+        fetch(`http://localhost:4000/Carts/${_id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -33,7 +33,7 @@ const OrderItemCard = ({ data, items, setItems }) => {
             if (data.deletedCount > 0) {
               Swal.fire(
                 'Deleted!',
-                'Your product has been deleted.',
+                'your selected food has been deleted.',
                 'success'
               )
               setTimeout(function () {

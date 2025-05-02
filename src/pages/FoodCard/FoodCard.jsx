@@ -18,6 +18,7 @@ const FoodCard = ({ food }) => {
                    <button className="p-1 px-3 text-white bg-yellow-700 rounded-lg"> {foodCategory}</button>
                     
                     <p className="w-[150px]"><span className="font-semibold text-sm">Available items :</span>  {quantity}</p>
+                    <p className="w-[150px]"><span className="font-semibold text-sm">Price :</span>  {price}</p>
                 </div>
                 <div className="card-actions">
                     <Link to={`/food-detail/${_id}`}>

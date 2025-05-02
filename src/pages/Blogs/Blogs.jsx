@@ -1,82 +1,198 @@
+import { Helmet } from "react-helmet";
 import Footer from "../footer/Footer";
-
 
 const Blogs = () => {
     return (
-        <div>
-            <div className="px-10">
-                <h1 className="text-4xl font-bold my-10">1. What is One way data binding?</h1>
-                <p className="bg-gray-200 text-justify p-5 rounded-lg">One-way data binding is a data flow architecture in which data is transmitted from a data source to a UI component, and the UI component displays or renders the received data. However, changes to the UI component's display do not affect the original data source. In other words, data flows in only one direction, from the data source to the UI component.
-
-                    In one-way data binding:
-
-                    Data Source: This is the source of data, which can be a database, an API, user input, or any other data provider.
-
-                    UI Component: The UI component, which can be a web page, a mobile app screen, or any other user interface, receives the data from the data source and displays it to the user.
-
-                    Updating Data: If the data in the data source changes, it will trigger an update to the UI component. The UI component reflects the changes in the data source without altering the data source itself.
-
-                    One-way data binding is commonly used in frameworks like React and Angular. It provides a clear and predictable way to manage the flow of data and keep the data source and the UI component separate, making it easier to reason about and maintain the application.</p>
+        <div className="bg-gray-50 min-h-screen">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Blogs - Restika Restaurant</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
+            
+            {/* Hero Section */}
+            <div className="bg-gradient-to-r from-orange-400 to-orange-600 py-12 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
+                    <h1 className="text-4xl md:text-5xl font-bold text-white text-center">
+                        Restika Food Blog
+                    </h1>
+                    <p className="mt-4 max-w-3xl mx-auto text-xl text-white text-center">
+                        Culinary insights, cooking tips, and food stories from our kitchen
+                    </p>
+                </div>
             </div>
-            <div className="px-10">
-                <h1 className="text-4xl font-bold my-10">2. What is NPM in node.js?</h1>
-                <p className="bg-gray-200 text-justify p-5 r2ounded-lg">NPM stands for "Node Package Manager." It is the default package manager for Node.js, which is a popular JavaScript runtime used for building server-side applications and command-line tools. NPM serves as a central repository for JavaScript packages and modules, making it easy to manage and distribute code libraries.
-
-                    Here are some key aspects of NPM in Node.js:
-
-                    Package Management: NPM allows developers to install, update, and manage JavaScript packages. These packages can contain reusable code, libraries, and modules that can be used in Node.js projects.
-
-                    Command-Line Tool: NPM provides a command-line interface (CLI) that allows developers to interact with the package manager. Common NPM commands include npm install, npm update, npm uninstall, and more.
-
-                    Package Registry: NPM hosts a public registry of JavaScript packages and modules, known as the npm registry. Developers can publish their own packages to this registry, making them available for others to use.
-
-                    Dependencies: Node.js projects often have dependencies on external packages. NPM helps manage these dependencies by allowing developers to specify them in a package.json file. This file lists the project's dependencies, and NPM can automatically install them.
-
-                    Scripts: NPM enables the execution of scripts defined in a project's package.json file. These scripts can include custom build tasks, testing, and other project-specific operations.
-
-                    Semantic Versioning: NPM uses semantic versioning (SemVer) to define package version numbers. This system helps ensure that updates to packages do not introduce breaking changes for projects that depend on them.
-
-                    Global and Local Packages: NPM can install packages either globally (accessible from the command line) or locally (specific to a project). Global packages are often used for development tools, while local packages are project-specific dependencies.
-
-                    Lock Files: NPM generates lock files (e.g., package-lock.json or yarn.lock) to provide deterministic and reproducible builds by recording the exact version of each package dependency.
-
-                    NPM is a fundamental tool for Node.js development, and it simplifies the process of managing external dependencies and sharing code within the JavaScript and Node.js ecosystem.</p>
+            
+            {/* Blog Content */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                
+                {/* Blog Post 1 */}
+                <div className="mb-16">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div className="md:flex">
+                            <div className="md:flex-shrink-0">
+                                <img className="h-48 w-full object-cover md:h-full md:w-64" 
+                                    src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                    alt="Food plating" />
+                            </div>
+                            <div className="p-6 md:p-8">
+                                <span className="inline-block px-3 py-1 text-sm font-semibold text-orange-600 bg-orange-100 rounded-full mb-2">
+                                    Culinary Arts
+                                </span>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    The Art of Food Plating: Presentation Tips from Our Chefs
+                                </h2>
+                                <p className="text-gray-600 mb-6">
+                                    Food presentation is just as important as taste when it comes to creating a memorable dining experience. At Restika, our chefs follow these key principles to create visually stunning dishes.
+                                </p>
+                                
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                    <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                                        <h3 className="font-semibold text-gray-800">Balance and Proportion</h3>
+                                        <p className="text-sm text-gray-600">The arrangement of food elements should create visual harmony.</p>
+                                    </div>
+                                    <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                                        <h3 className="font-semibold text-gray-800">Color Contrast</h3>
+                                        <p className="text-sm text-gray-600">We use natural colors from fresh ingredients to create vibrant plates.</p>
+                                    </div>
+                                    <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                                        <h3 className="font-semibold text-gray-800">Texture Variation</h3>
+                                        <p className="text-sm text-gray-600">Mixing crispy, smooth, and crunchy elements adds dimension to dishes.</p>
+                                    </div>
+                                    <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-orange-400">
+                                        <h3 className="font-semibold text-gray-800">Height and Layering</h3>
+                                        <p className="text-sm text-gray-600">Building vertical elements creates drama on the plate.</p>
+                                    </div>
+                                </div>
+                                
+                                <p className="italic text-gray-600">
+                                    The next time you dine at Restika, take a moment to appreciate the artistry behind each plate before enjoying the flavors.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Blog Post 2 */}
+                <div className="mb-16">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div className="md:flex flex-row-reverse">
+                            <div className="md:flex-shrink-0">
+                                <img className="h-48 w-full object-cover md:h-full md:w-64" 
+                                    src="https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                    alt="Global flavors" />
+                            </div>
+                            <div className="p-6 md:p-8">
+                                <span className="inline-block px-3 py-1 text-sm font-semibold text-green-600 bg-green-100 rounded-full mb-2">
+                                    Global Cuisine
+                                </span>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    Exploring the Global Flavors at Restika
+                                </h2>
+                                <p className="text-gray-600 mb-6">
+                                    At Restika, our menu celebrates the diversity of global cuisine, bringing together flavors from around the world. Here's a journey through some of the culinary traditions that inspire our dishes.
+                                </p>
+                                
+                                <div className="space-y-4 mb-6">
+                                    <div className="flex items-start">
+                                        <span className="text-2xl text-orange-500 mr-3">🌊</span>
+                                        <div>
+                                            <h3 className="font-semibold text-gray-800">Mediterranean Magic</h3>
+                                            <p className="text-sm text-gray-600">Our Mediterranean-inspired dishes feature olive oil, fresh herbs, tomatoes, and seafood.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <span className="text-2xl text-orange-500 mr-3">🍜</span>
+                                        <div>
+                                            <h3 className="font-semibold text-gray-800">Asian Influences</h3>
+                                            <p className="text-sm text-gray-600">From the spicy curries of Thailand to the umami-rich dishes of Japan.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start">
+                                        <span className="text-2xl text-orange-500 mr-3">🌮</span>
+                                        <div>
+                                            <h3 className="font-semibold text-gray-800">Latin American Flair</h3>
+                                            <p className="text-sm text-gray-600">The vibrant cuisines of Mexico, Peru, and Brazil inspire several of our signature dishes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <p className="italic text-gray-600">
+                                    This fusion of global techniques and flavors with the finest local ingredients creates the unique dining experience that Restika is known for.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Blog Post 3 */}
+                <div className="mb-16">
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+                        <div className="md:flex">
+                            <div className="md:flex-shrink-0">
+                                <img className="h-48 w-full object-cover md:h-full md:w-64" 
+                                    src="https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                                    alt="Seasonal ingredients" />
+                            </div>
+                            <div className="p-6 md:p-8">
+                                <span className="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-2">
+                                    Seasonal Cooking
+                                </span>
+                                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                    Seasonal Ingredients: Why We Change Our Menu
+                                </h2>
+                                <p className="text-gray-600 mb-6">
+                                    At Restika, we believe in embracing the natural cycle of seasons in our menu. Here's why we're committed to seasonal cooking and how it enhances your dining experience.
+                                </p>
+                                
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                                    <div className="p-4 bg-gray-50 rounded-lg flex flex-col items-center text-center">
+                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3">
+                                            <span role="img" aria-label="leaf" className="text-xl">🍃</span>
+                                        </div>
+                                        <h3 className="font-semibold text-gray-800">Peak Flavor and Nutrition</h3>
+                                        <p className="text-sm text-gray-600">Fruits and vegetables harvested at their peak season naturally taste better.</p>
+                                    </div>
+                                    <div className="p-4 bg-gray-50 rounded-lg flex flex-col items-center text-center">
+                                        <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-3">
+                                            <span role="img" aria-label="earth" className="text-xl">🌍</span>
+                                        </div>
+                                        <h3 className="font-semibold text-gray-800">Environmental Benefits</h3>
+                                        <p className="text-sm text-gray-600">Seasonal eating reduces the carbon footprint of food transportation.</p>
+                                    </div>
+                                </div>
+                                
+                                <p className="italic text-gray-600">
+                                    We invite you to join us throughout the year to experience the ever-changing tapestry of flavors that seasonal cooking provides.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {/* Newsletter Section */}
+                <div className="bg-orange-50 rounded-lg p-8 text-center">
+                    <div className="max-w-3xl mx-auto">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                            Stay Updated with Restika's Food Journey
+                        </h3>
+                        <p className="text-gray-600 mb-6">
+                            Subscribe to our newsletter for the latest culinary insights, special offers, and upcoming events.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-2 max-w-lg mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Your email address"
+                                className="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                            />
+                            <button className="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-6 rounded-md transition-colors">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="px-10">
-                <h1 className="text-4xl font-bold my-10">3. Different between Mongodb database vs mySQL database</h1>
-                <p className="bg-gray-200 text-justify p-5 rounded-lg">MongoDB and MySQL are both popular database management systems, but they have different characteristics and use cases. Here are some key differences between MongoDB and MySQL:
-
-                    Data Model:
-
-                    MongoDB: MongoDB is a NoSQL database that uses a flexible, document-oriented data model. Data is stored in BSON (Binary JSON) format, and documents can have different structures within the same collection.
-                    MySQL: MySQL is a relational database management system (RDBMS) that uses structured tables with predefined schemas. Data is organized into rows and columns, and each table has a fixed structure defined by a schema.
-                    Schema:
-
-                    MongoDB: MongoDB is schema-less, meaning you can change the structure of documents in a collection without affecting other documents. This flexibility is ideal for projects with evolving data requirements.
-                    MySQL: MySQL enforces a rigid schema, which means the structure of tables and relationships between them must be defined in advance. Schema changes can be complex and may require data migrations.
-                    Query Language:
-
-                    MongoDB: MongoDB uses a rich query language for querying JSON-like documents. It supports complex queries and aggregation operations.
-                    MySQL: MySQL uses SQL (Structured Query Language) for querying data. SQL provides a powerful and standardized way to query relational databases.
-                    Scaling:
-
-                    MongoDB: MongoDB is designed for horizontal scalability and can easily distribute data across multiple servers. It's well-suited for applications that need to scale out to handle large amounts of data.
-                    MySQL: MySQL traditionally relies on vertical scaling, which means upgrading hardware resources for a single server. While there are clustering and sharding options, they can be more complex to set up compared to MongoDB's native horizontal scaling.
-                    Transactions:
-
-                    MongoDB: MongoDB introduced multi-document transactions in recent versions, but it's not as mature in this area as traditional RDBMS systems like MySQL.
-                    MySQL: MySQL has a strong history of supporting ACID-compliant transactions, making it suitable for applications that require strict data consistency and integrity.
-                    Data Integrity:
-
-                    MongoDB: MongoDB offers flexibility but may require additional application logic to maintain data consistency and integrity.
-                    MySQL: MySQL enforces referential integrity and provides data validation through constraints and triggers.
-                    Use Cases:
-
-                    MongoDB is often chosen for applications with rapidly changing requirements, unstructured or semi-structured data, and those that benefit from horizontal scalability, such as content management systems, real-time analytics, and IoT platforms.
-                    MySQL is commonly used in applications where data structure is well-defined, and transactional integrity is critical, such as e-commerce systems, financial applications, and traditional relational data.
-                    Ultimately, the choice between MongoDB and MySQL depends on the specific needs of your project, including data complexity, scalability requirements, and the importance of transactional consistency. Many projects use a combination of both to leverage their respective strengths.</p>
-            </div>
-            <Footer></Footer>
+            
+            <Footer />
         </div>
     );
 };

@@ -1,18 +1,43 @@
+import { Link } from 'react-router-dom';
+
 const HomeCard = ({ data }) => {
-    const { foodName, foodImage, recipeDescription, chefName, foodCategory, price, quantity, countryOrigin, foodDetails } = data;
+    const { _id, foodName, foodImage, foodCategory, price, quantity } = data;
 
     return (
-        <div className="card card-side bg-base-100 shadow-xl p-4 sm:p-6 md:p-8 flex flex-col sm:flex-row">
-            <figure className="mb-4 sm:mb-0 sm:mr-4">
-                <img className="rounded-xl w-full h-[180px] object-cover" src={foodImage} alt="Food" />
-            </figure>
-            <div className="card-body">
-                <h2 className="card-title text-lg sm:text-xl md:text-2xl">{foodName}</h2>
-                <p className="text-sm mt-2">
-                    <span className="font-semibold">Available items:</span> {quantity}
-                </p>
-                <button className="mt-2 p-1 px-3 text-white bg-yellow-700 rounded-lg">{foodCategory}</button>
-                {/* Additional text content if needed */}
+        <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl transform hover:scale-105">
+            <div className="relative">
+                <img 
+                    className="w-full h-56 object-cover" 
+                    src={foodImage} 
+                    alt={foodName} 
+                />
+                <div className="absolute top-4 right-4">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-white bg-orange-500 rounded-full">
+                        {foodCategory}
+                    </span>
+                </div>
+            </div>
+            
+            <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{foodName}</h3>
+                
+                <div className="flex justify-between items-center mb-4">
+                    <div className="text-orange-500 font-bold text-lg">
+                        ${price}
+                    </div>
+                    <div className="text-sm text-gray-600">
+                        {quantity} available
+                    </div>
+                </div>
+                
+                <div className="mt-4">
+                    <Link 
+                        to={`/food-detail/${_id}`}
+                        className="block w-full py-2 px-4 bg-orange-100 hover:bg-orange-200 text-orange-500 text-center font-medium rounded-md transition duration-300"
+                    >
+                        View Details
+                    </Link>
+                </div>
             </div>
         </div>
     );

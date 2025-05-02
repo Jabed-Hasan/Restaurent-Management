@@ -31,7 +31,7 @@ const UpdateFood = () => {
         console.log(UpdateFood)
        
 
-        fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/myItems/update/${_id}`, {
+        fetch(`http://localhost:4000/myItems/update/${_id}`, {
 
             method:'PUT',
             headers:{

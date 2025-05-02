@@ -70,7 +70,7 @@ const Purchase = () => {
 
             console.log(UpdateFood);
 
-            fetch(`https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/food-detail/purchase/${_id}`, {
+            fetch(`http://localhost:4000/food-detail/purchase/${_id}`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -99,9 +99,9 @@ const Purchase = () => {
 
     return (
         <div className="bg-[#F4F3F0] p-24">
-             <div className='text-center'>
+          
              <img className='w-[400px] h-[400px] mx-auto rounded-full ' src= {foodImage} alt="" />
-             </div>
+          
 
            <h1 className='text-4xl font-bold text-center my-5'>Purchage Your Food</h1>
             <h1 className="text-xl font-bold text-center">Purchase Food Item : {foodName}</h1>

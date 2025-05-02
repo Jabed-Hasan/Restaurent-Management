@@ -44,13 +44,13 @@ const AuthProvider = ({ children }) => {
 
             if(currentUser){
                   
-                   axios.post('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/jwt',loggedUser,)
+                   axios.post('http://localhost:4000/jwt',loggedUser,)
                 .then(res =>{
                     console.log('token response',res.data)
                 } )
             } 
             else{
-                axios.post('https://b8a11-server-side-jabed-hasan-j0qbx0vxr-jabeds-projects.vercel.app/logout',loggedUser, {
+                axios.post('http://localhost:4000/logout',loggedUser, {
                     withCredentials: true
                 }) 
                 .then(res =>{

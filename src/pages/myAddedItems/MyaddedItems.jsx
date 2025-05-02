@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Carts from "./Carts";
 import { useContext } from "react"; // Import the context
 import { AuthContext } from "../../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const MyaddedItems = () => {
     const foodscart = useLoaderData();
@@ -18,6 +19,11 @@ const MyaddedItems = () => {
 
     return (
         <div>
+              <Helmet>
+                <meta charSet="utf-8" />
+                <title>Added Food Items- Your Added Items</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             {filteredCarts.length > 0 ? (
                 <div className='grid md:grid-cols-2 gap-4'>
                     {filteredCarts.map((carts) => (
@@ -25,7 +31,7 @@ const MyaddedItems = () => {
                     ))}
                 </div>
             ) : (
-                <p className="text-4xl text-center my-20 ">No carts found for this email.</p>
+                <p className="text-4xl text-center my-20 ">No  foods added for this email. Please Add your Foods</p>
             )}
         </div>
     );
